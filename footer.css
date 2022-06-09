@@ -7,7 +7,8 @@
     --primary-color: hsl(206deg 68% 34%);
     --secondary-color: rgb(20, 115, 187);
     --headline-color: rgb(220, 176, 17);
-    --text-color: #b7f5ff;
+    --text-color:#b7f5ff; 
+    --hover-color: #1191a4; 
     
 }
 
@@ -51,8 +52,8 @@ footer{
     border-bottom: 1px solid var(--headline-color);
 }
 
-.list-wrapper ul li:hover{
-    font-size: 20px;
+.foot-wrapper ul li a:hover{
+    color: var(--hover-color);
 }
 
 .social-wrapper{
@@ -79,7 +80,7 @@ footer{
 }
 
 .social-wrapper ul li:hover{
-    font-size: 20px;
+    color: var(--hover-color)
 }
 .social-wrapper p{
     color: var(--headline-color);
