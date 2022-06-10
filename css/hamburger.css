@@ -6,7 +6,7 @@
 :root{
     --primary-color: hsl(206deg 68% 34%);
     --secondary-color: rgb(20, 115, 187);
-    --headline-color: rgb(220, 176, 17);
+    --headline-color: rgb(252, 254, 255);
     --text-color:#b7f5ff; 
     --hover-color: #1191a4; 
     
@@ -24,7 +24,15 @@
     width: 100%;
     height: 5vh;
     align-items: center;
+    padding: 3vh;
     
+}
+.nav-link{
+    padding: 0.5rem 0.5rem;
+}
+.nav-link:hover{
+    border-radius: 8px;
+    background-color: var(--hover-color);
 }
 
 .nav-logo{
@@ -68,13 +76,15 @@
         display: block;
     }
     .nav-menu{
+        margin-left: 0;
         flex-direction: column;
-        position: fixed;
-        margin-top: 15vh;
+        position: absolute;
+        margin-top: 29vh;
         z-index: 10;
-        left: -102%;
+        left: -120%;
         width: 100%;
-        background-color: antiquewhite;
+        background-color: var(--primary-color);
+
     }
 
     .nav-menu.active{
@@ -95,8 +105,9 @@
 
     .nav-item{
         text-align: center;
-        border: 1px solid black;
+        border-bottom: 1px solid var(--headline-color);
         width: 100%;
+        padding: 0.5rem;
     }
 
     .navbar{
