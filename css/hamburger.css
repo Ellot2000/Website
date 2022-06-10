@@ -3,6 +3,14 @@
     padding: 0px;
 }
 
+:root{
+    --primary-color: hsl(206deg 68% 34%);
+    --secondary-color: rgb(20, 115, 187);
+    --headline-color: rgb(220, 176, 17);
+    --text-color:#b7f5ff; 
+    --hover-color: #1191a4; 
+    
+}
 
 .header{
     display: flex;
@@ -21,7 +29,8 @@
 
 .nav-logo{
     margin-left: 2vw;
-    color: var(-headline-color);
+    color: var(--headline-color);
+    text-decoration: none;
 }
 
 .nav-menu{
@@ -38,6 +47,7 @@
 
 .nav-item a{
     text-decoration: none;
+    color: var(--headline-color)
 }
 
 .hamburger{
@@ -49,7 +59,7 @@
     width: 25px;
     height: 3px;
     margin: 5px auto;
-    background-color: #101010;
+    background-color: var(--text-color);
 }
 
 
