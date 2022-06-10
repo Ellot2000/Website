@@ -1,0 +1,14 @@
+
+*{
+    margin: 0px;
+    padding: 0;
+}
+
+:root{
+    --primary-color: hsl(206deg 68% 34%);
+    --secondary-color: rgb(20, 115, 187);
+    --headline-color: rgb(220, 176, 17);
+    --text-color:#b7f5ff; 
+    --hover-color: #1191a4; 
+    
+}
