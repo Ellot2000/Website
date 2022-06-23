@@ -1,10 +1,26 @@
+:root{
+    --primary-color: rgb(19, 111, 182);
+    --secondary-color: rgb(50, 105, 255);
+    --headline-color: rgb(212, 158, 20);
+    --text-color:#b7f5ff; 
+    --hover-color: #1191a4; 
+    
+}
+
+
+
+
 .card-wrapper{
+    /*
     width: 128px;
     height: 181px;
     gap: 10px;
     background-color: rgba(207, 207, 207, 0.504);
     padding: 5px 9px;
-
+*/
+    max-width: 250px;
+    text-align: center;
+    margin-top: 10px;
 }
 .card-row{
     margin-top: 10vh;
@@ -17,9 +33,13 @@
 
 .card-wrapper img{
     width: 100%;
-    height: 122px;
+    height: 36vh;
     object-fit: cover;
     object-position: center;
+}
+
+.card-wrapper img:hover{
+    opacity: 0.75;
 }
 
 .info-wrapper{
@@ -28,22 +48,77 @@
     flex-direction: column;
 }
 
-.info-wrapper a{
-    text-align: center;
-    text-decoration: none;
-    background-color: var(--secondary-color);
-    padding: 4px 6px;
-}
-
 .price-info{
     display: flex;
     justify-content: space-between;
 }
 
+.price-info:hover{
+    opacity: 0.75;
+
+}
+
 .info-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     top: 0;
-    background-color: red;
+    background-color: white;
     height: 100%;
     width: 100%;
     position: absolute;
+}
+
+.info-img{
+    object-fit: cover;
+    object-position: center;
+    width: 80vw;
+    height: 80vh;
+}
+
+.info-product{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.info-card a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    background-color: var(--secondary-color);
+    color: var(--headline-color);
+
+}
+
+.info-card a:hover{
+    color: var(--text-color);
+}
+
+.info-text{
+  text-align: center;
+  margin-top: 2vh;  
+}
+
+.close{
+    padding: 10px;
+    text-align: end;
+}
+
+@media only screen and (max-width: 768px){
+    .card-row{
+        flex-wrap: wrap;
+    }
+
+    .card-wrapper{
+        max-width: 170px;
+    }
+
+
+
 }

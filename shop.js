@@ -8,24 +8,28 @@ let product = [
     img: "background",
     price: 6,
     id: 1,
+    info: "här är lite text om producten",
   },
   {
     name: "Rolex",
     img: "background",
     price: 100,
     id: 2,
+    info: "här är lite text om producten",
   },
   {
     name: "T-shirt",
     img: "background",
     price: 11,
     id: 3,
+    info: "här är lite text om producten",
   },
   {
     name: "Keps",
     img: "background",
     price: 12,
     id: 4,
+    info: "här är lite text om producten",
   },
 ];
 
@@ -38,7 +42,7 @@ function addObject(product) {
     card.setAttribute("data-id", cards.id);
     card.innerHTML = `
           
-        <img src="img/${cards.img}.jpg" alt="" />
+        <img src="img/${cards.img}.jpg" alt="${cards.name}" />
         <div class="info-wrapper">
           <div class="price-info">
             <p>${cards.name}</p>
@@ -67,12 +71,28 @@ function getApiMovieDetails(id) {
   const infoCard = document.createElement("div");
   infoCard.classList.add("info-card");
   infoCard.innerHTML = `
-   <div>${product[newId].name}</div>
-  
+   <div>
+    <p class ="close"><i class="cross fa-solid fa-x"></i></p>
+    <img  class ="info-img" src ="img/${product[newId].img}.jpg" alt ="${product[newId].name}" />
+    <div class="info-product">
+        <p>${product[newId].name}</p>
+        <p>$${product[newId].price}</p>
+    </div>
+    <a href ="#">Add to cart</a>
+    <p class ="info-text">${product[newId].info}</p>
+  </div>
+
+
   
   
   
   `;
+  infoCard.addEventListener("click", function (event) {
+    if (event.target.classList.contains("cross")) {
+      event.target.closest(".info-card").style.display = "none";
+    }
+  });
+
   document.body.appendChild(infoCard);
 }
 
